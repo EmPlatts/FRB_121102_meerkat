@@ -2,7 +2,7 @@
  Find structure optimised DM for FRBs using autocorrelation functions. Code used in Platts, Caleb, Stappers et al. (2020).
  Not recommended for general use. Only tested on 10 pulses.
  
- Archives are processed with PSRCHIVE and SIGRPOC. Data saved to text files for each DM in search range using
+ Archives are processed with PSRCHIVE and SIGRPOC. Data saved to text files for each DM in search range using:
  
       pdv -F -t -jD <filename>.ar > <filename>.txt
  
