@@ -1,4 +1,4 @@
-### FRB_121102_meerkat
+### Find structure optimised dispersion measure (DM) for FRB 121102
  Find structure optimised DM for FRBs using autocorrelation functions. Code used in Platts, Caleb, Stappers et al. (2020).
  Not recommended for general use. Only tested on 10 pulses.
  
@@ -12,6 +12,6 @@
       
  where <on_pulse> and <off_pulse> are the bins of the pulse region and <step> is the step size of between bins.
 
- After which, run `find_opt_dm.py`.
+ After which, run `find_opt_dm.py`. Read code and adjust parameters as needed.
  
  
