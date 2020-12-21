@@ -19,8 +19,8 @@ for i in range(min_dm_idx,max_dm_idx,1):
     iffts_file = iffts[i]
     n0 = 2 #start from second timestep to remove noise
     num_iter = 100
-    c_1 = 4 #may be 2 to 4. For bright pulses, c1=2, faint c1=4. Lange uses 2 for their sample.
-    c_2 = 4 #may be 1.5 to 4. For bright pulses, c1=1.5 or 2. Lange uses 1.5 for their sample.
+    c_1 = 4 #may be 2 to 4. For very curvy ACFs, c1=2, for less curvy ACFs (less defined flattening points) c1=4. Lange uses 2 for their sample.
+    c_2 = 4 #may be 1.5 to 4. For very curvy ACFs, c1=1.5 or 2. Lange uses 1.5 for their sample.
     for i in range(num_iter):
         d_i = []
         d0 = np.abs(iffts_file[n0]-iffts_file[n0-1])
