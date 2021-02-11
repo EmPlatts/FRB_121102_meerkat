@@ -10,7 +10,7 @@ iffts = np.load('output_data/iffts_'+pulse_name+'.npy')
 time_lag = np.load('output_data/time_lag_'+pulse_name+'.npy')
 
 # Adjust to region of interest
-min_dm_idx = 5620-5499 #5499 is to correct for DM which starts at 550.1. Check your index and change as needed.
+min_dm_idx = 5620-5499 #5499 is to correct for DM which starts at 550.1. Check the index for your .txt files and change as needed.
 max_dm_idx = 5670-5499
 
 time_lags = []
@@ -31,7 +31,7 @@ for i in range(min_dm_idx,max_dm_idx,1):
         if len(np.where(d_i<d0/c_1)[0]) == 0:
             n0 += 1
             continue
-        # global check over 8 bins
+        # global check over 8 bins (Lange 1998 uses 4 bins - you may need to change this.)
         elif (len(np.where(d_i<d0/c_1)[0]) > 0) and (np.abs(iffts_file[n0]-iffts_file[n0-8]) < np.abs(c_2*(iffts_file[n0+8]-iffts_file[n0]))):
             n0 += 1
             continue
@@ -39,7 +39,7 @@ for i in range(min_dm_idx,max_dm_idx,1):
             n0 += np.where(d_i<d0/c_1)[0][0] 
             break
         else:
-            raise ArithmeticError('Something is amiss... Check all cases are covered by elif statements.')
+            raise ArithmeticError('Something is amiss... Have you changed the elif statements?')
 
     time_lags.append(time_lag[n0])
 
