@@ -14,7 +14,7 @@
  After which, run `find_opt_dm.py`. Read code and adjust parameters as needed.
  
  ### Please Note:
- Unfortunately, this code is not a plug-and-play. You will need to find the sensitivity parameters c1 and c2 that suit your pulses. In general, ACFs that have a more clear flattening point have c1=2 and c2=0.5 (first image), and ACFs with a less clear flattening point have higher values (e.g. for my sample of pulses, c1=4 and c2=4; second image).
+ Unfortunately, this code is not a plug-and-play. You will need to find the sensitivity parameters c1 and c2 that suit your pulses. In general, ACFs that have a more clear flattening point have c1=2 and c2=0.5 (first image), and ACFs with a less clear flattening point have higher values (e.g. for our sample of pulses, c1=4 and c2=4; second image).
  
  <img src="https://github.com/EmPlatts/FRB_121102_meerkat/blob/main/img/ACF_example.png" width="500">  <img src="https://github.com/EmPlatts/FRB_121102_meerkat/blob/main/img/ACF_compare.png" width="500">
  
