@@ -15,8 +15,8 @@ max_dm_idx = 5670-5499
 
 time_lags = []
 for i in range(min_dm_idx,max_dm_idx,1):
-    time_lag = time_lag
     iffts_file = iffts[i]
+    # plt.plot(time_lag,iffts_file,label=str((i+5499)/10),linewidth=1) 
     n0 = 2 #start from second timestep to remove noise
     num_iter = 100
     c_1 = 4 #may be 2 to 4. For very curvy ACFs, c1=2, for less curvy ACFs (less defined flattening points) c1=4. Lange uses 2 for their sample.
@@ -42,6 +42,8 @@ for i in range(min_dm_idx,max_dm_idx,1):
             raise ArithmeticError('Something is amiss... Have you changed the elif statements?')
 
     time_lags.append(time_lag[n0])
+    # plt.scatter(time_lag[n0],iffts_file[n0])
+# plt.show()
 
 # Check things look okay from choice of c_1 and c_2, and range of interest
 t = time_lags
