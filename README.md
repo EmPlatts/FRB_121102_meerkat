@@ -22,5 +22,5 @@
  
  <img src="https://github.com/EmPlatts/FRB_121102_meerkat/blob/main/img/Lange_ACF.png" width="500">
  
- Finally, you will need to set the smoothing factor for spline.
+ Finally, you will need to set the smoothing factor for spline. This will hopefully be updated in the future to be more robust.
  
